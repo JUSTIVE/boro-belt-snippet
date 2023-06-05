@@ -4,6 +4,7 @@
   "description": "marketboro's ts-belt snippet",
   "version": "0.0.5",
   "publisher": "JUSTIVE",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/JUSTIVE/boro-belt"
