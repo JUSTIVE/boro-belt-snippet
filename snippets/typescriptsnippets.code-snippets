@@ -2,7 +2,7 @@
   "Pipe Operator": {
     "description": "pipe operator",
     "prefix": "pp",
-    "body": ["pipe(${1:initialValue}, ${2:following function})"]
+    "body": ["pipe(", "  ${1:initialValue},", "  ${2:following function}", ")"]
   },
   "Flow Operator": {
     "description": "flow operator",
