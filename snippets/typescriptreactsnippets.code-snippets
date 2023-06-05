@@ -1,1 +1,212 @@
-{}
+{
+  "Pipe Operator": {
+    "description": "pipe operator",
+    "prefix": "pp",
+    "body": ["pipe(${1:initialValue}, ${2:following function})"]
+  },
+  "Flow Operator": {
+    "description": "flow operator",
+    "prefix": "fl",
+    "body": "flow(${1:initialFunction}, ${2:following function})"
+  },
+  //////////////////////////////////////////////////////////////
+  ///////////////////////// Array /////////////////////////////
+  //////////////////////////////////////////////////////////////
+  "Array all": {
+    "description": "Array.all",
+    "prefix": "aal",
+    "body": "A.all(${1:function}),"
+  },
+  "Array keepMap": {
+    "description": "Array.keepMap",
+    "prefix": "akm",
+    "body": "A.keepMap(${1:function}),"
+  },
+  "Array map": {
+    "description": "Array.map",
+    "prefix": "am",
+    "body": "A.map(${1:function}),"
+  },
+  "Array sort": {
+    "description": "Array.sort",
+    "prefix": "aso",
+    "body": "A.sort(${1:function}),"
+  },
+  "Array head": {
+    "description": "Array.head",
+    "prefix": "ah",
+    "body": "A.head(${1:array}),"
+  },
+  "Array tail": {
+    "description": "Array.tail",
+    "prefix": "at",
+    "body": "A.tail(${1:array}),"
+  },
+  "Array partition": {
+    "description": "Array.partition",
+    "prefix": "apt",
+    "body": "A.partition(${1:predicateFn}),"
+  },
+  //////////////////////////////////////////////////////////////
+  ///////////////////////// Option /////////////////////////////
+  //////////////////////////////////////////////////////////////
+  "Option Some": {
+    "description": "Option.Some",
+    "prefix": "os",
+    "body": "O.some(${1:value}),"
+  },
+  "Option None": {
+    "description": "Option.None",
+    "prefix": "on",
+    "body": "O.None,"
+  },
+  "Option isSome": {
+    "description": "Option.isSome",
+    "prefix": "ois",
+    "body": "O.isSome(${1:value}),"
+  },
+  "Option isNone": {
+    "description": "Option.isNone",
+    "prefix": "oin",
+    "body": "O.isNone(${1:value}),"
+  },
+  "Option map": {
+    "description": "Option.map",
+    "prefix": "om",
+    "body": "O.map(${1:function}),"
+  },
+  "Option flatMap": {
+    "description": "Option.flatMap",
+    "prefix": "ofm",
+    "body": "O.flatMap(${1:function}),"
+  },
+  "Option getWithDefault": {
+    "description": "Option.getWithDefault",
+    "prefix": "owd",
+    "body": "O.getWithDefault(${1:defaultValue}),"
+  },
+  "Option fromNullable": {
+    "description": "Option.fromNullable",
+    "prefix": "ofn",
+    "body": "O.fromNullable(${:value}),"
+  },
+  "Option fromExecution": {
+    "description": "Option.fromExecution",
+    "prefix": "ofe",
+    "body": "O.fromExecution(${1:function}),"
+  },
+  "Option fromPredicate": {
+    "description": "Option.fromPredicate",
+    "prefix": "ofp",
+    "body": "O.fromPredicate(${1:predicateFn}),"
+  },
+  "Option fromPromise": {
+    "description": "Option.fromPromise",
+    "prefix": "ofpr",
+    "body": "O.fromPromise(${1:promise}),"
+  },
+  "Option contains": {
+    "description": "Option.contains",
+    "prefix": "oc",
+    "body": "O.contains(${1:value}),"
+  },
+  //////////////////////////////////////////////////////////////
+  ///////////////////////// Function ///////////////////////////
+  //////////////////////////////////////////////////////////////
+  "Function always": {
+    "description": "Function always",
+    "prefix": "fal",
+    "body": "F.always(${1:value})"
+  },
+  "Function identity": {
+    "description": "Function identity",
+    "prefix": "fid",
+    "body": "F.identity"
+  },
+  "Function coerce": {
+    "description": "Function coerce",
+    "prefix": "fc",
+    "body": "F.coerce(${1:value})"
+  },
+  "Function tap": {
+    "description": "Function.tap",
+    "prefix": "ft",
+    "body": "F.tap(${1:function})"
+  },
+  "Function debounce": {
+    "description": "Fuction.debounce",
+    "prefix": "fdb",
+    "body": "F.debounce(${1:time})"
+  },
+  "Function throttle": {
+    "description": "Function.trottle",
+    "prefix": "fth",
+    "body": "F.throttle(${1:time})"
+  },
+  //////////////////////////////////////////////////////////////
+  ///////////////////////// String /////////////////////////////
+  //////////////////////////////////////////////////////////////
+  "String toUpper": {
+    "description": "String toUpper",
+    "prefix": "su",
+    "body": "S.toUpper"
+  },
+  "String toLower": {
+    "description": "String toLower",
+    "prefix": "sl",
+    "body": "S.toLower"
+  },
+  "String trim": {
+    "description": "String trim",
+    "prefix": "st",
+    "body": "S.trim"
+  },
+  "String remove": {
+    "description": "String remove",
+    "prefix": "sr",
+    "body": "S.remove(${1:substring})"
+  },
+  "String removeAll": {
+    "description": "String removeAll",
+    "prefix": "sra",
+    "body": "S.removeAll(${1:substring})"
+  },
+  //////////////////////////////////////////////////////////////
+  ////////////////////// Object(Dict) //////////////////////////
+  //////////////////////////////////////////////////////////////
+  "Dict mapWithKey": {
+    "description": "Dict mapWithKey",
+    "prefix": "dmk",
+    "body": "D.mapWithKey(${1:function})"
+  },
+  //////////////////////////////////////////////////////////////
+  /////////////////////// ts-pattern ///////////////////////////
+  //////////////////////////////////////////////////////////////
+  "Pattern match": {
+    "description": "Pattern match",
+    "prefix": "ptm",
+    "body": [
+      "match(${1:value})",
+      ".${2:case}(${3:predicateFn}, ${4:handler})",
+      ".otherwise(${5:handler})"
+    ]
+  },
+  "Pattern matching with With": {
+    "description": "Pattern matching with With",
+    "prefix": "ptmwt",
+    "body": [
+      "match(${1:value})",
+      ".with(${2:pattern},${3:handler})",
+      ".otherwise(${4:handler})"
+    ]
+  },
+  "Pattern matching with When": {
+    "description": "Pattern matching with When",
+    "prefix": "ptmwh",
+    "body": [
+      "match(${1:value})",
+      ".when(${2:handler},${3:handler})",
+      ".otherwise(${4:handler})"
+    ]
+  }
+}
