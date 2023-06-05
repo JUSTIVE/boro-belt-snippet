@@ -1,0 +1,20 @@
+{
+  "name": "boro-belt",
+  "displayName": "boro-belt",
+  "description": "marketboro's ts-belt snippet",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.78.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
