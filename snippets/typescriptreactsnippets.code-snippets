@@ -2,7 +2,7 @@
   "Pipe Operator": {
     "description": "pipe operator",
     "prefix": "pp",
-    "body": ["pipe(${1:initialValue}, ${2:following function})"]
+    "body": ["pipe(", "  ${1:initialValue},", "  ${2:following function}", ")"]
   },
   "Flow Operator": {
     "description": "flow operator",
@@ -88,12 +88,12 @@
   "Option fromNullable": {
     "description": "Option.fromNullable",
     "prefix": "ofn",
-    "body": "O.fromNullable(${:value}),"
+    "body": "O.fromNullable,"
   },
   "Option fromExecution": {
     "description": "Option.fromExecution",
     "prefix": "ofe",
-    "body": "O.fromExecution(${1:function}),"
+    "body": "O.fromExecution,"
   },
   "Option fromPredicate": {
     "description": "Option.fromPredicate",
@@ -178,6 +178,11 @@
     "description": "Dict mapWithKey",
     "prefix": "dmk",
     "body": "D.mapWithKey(${1:function})"
+  },
+  "Dict Get": {
+    "description": "Dict get",
+    "prefix": "dg",
+    "body": "D.get(${1:key})"
   },
   //////////////////////////////////////////////////////////////
   /////////////////////// ts-pattern ///////////////////////////
