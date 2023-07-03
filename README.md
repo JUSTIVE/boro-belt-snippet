@@ -1,4 +1,4 @@
-# boro-belt 
+# boro-belt
 
 Market Boro's vscode snippet for ts-belt and ts-pattern.
 
@@ -9,7 +9,10 @@ Market Boro's vscode snippet for ts-belt and ts-pattern.
 - Prefix: pp
 - Body:
 ```
-pipe(${1:initialValue}, ${2:following function})
+pipe(
+  ${1:initialValue},
+  ${2:following function}
+)
 ```
 
 
@@ -153,7 +156,7 @@ O.getWithDefault(${1:defaultValue}),
 - Prefix: ofn
 - Body:
 ```
-O.fromNullable(${:value}),
+O.fromNullable,
 ```
 
 
@@ -162,7 +165,7 @@ O.fromNullable(${:value}),
 - Prefix: ofe
 - Body:
 ```
-O.fromExecution(${1:function}),
+O.fromExecution,
 ```
 
 
@@ -298,6 +301,15 @@ S.removeAll(${1:substring})
 - Body:
 ```
 D.mapWithKey(${1:function})
+```
+
+
+### Dict Get
+- Description: Dict get
+- Prefix: dg
+- Body:
+```
+D.get(${1:key})
 ```
 
 
