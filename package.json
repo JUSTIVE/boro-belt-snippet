@@ -15,6 +15,9 @@
   "categories": [
     "Snippets"
   ],
+  "scripts": {
+    "docs-gen": "tsx --tsconfig ./tsconfig.json ./.docs/readmeUpdater.ts"
+  },
   "contributes": {
     "snippets": [
       {
@@ -28,8 +31,13 @@
     ]
   },
   "devDependencies": {
+    "@mobily/ts-belt": "^3.13.1",
+    "@types/jest": "^29.5.2",
     "@types/node": "^20.3.1",
+    "jest": "^29.5.0",
     "ts-node": "^10.9.1",
+    "ts-pattern": "^5.0.1",
+    "tsx": "^3.12.7",
     "typescript": "^5.1.3"
   }
 }
