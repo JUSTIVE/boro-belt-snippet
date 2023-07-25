@@ -315,7 +315,7 @@ D.get(${1:key})
 
 ### Pattern match
 - Description: Pattern match
-- Prefix: ptm
+- Prefix: pm
 - Body:
 ```
 match(${1:value})
@@ -326,7 +326,7 @@ match(${1:value})
 
 ### Pattern matching with With
 - Description: Pattern matching with With
-- Prefix: ptmwt
+- Prefix: pm.with
 - Body:
 ```
 match(${1:value})
@@ -337,7 +337,7 @@ match(${1:value})
 
 ### Pattern matching with When
 - Description: Pattern matching with When
-- Prefix: ptmwh
+- Prefix: pm.when
 - Body:
 ```
 match(${1:value})

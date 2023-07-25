@@ -189,7 +189,7 @@
   //////////////////////////////////////////////////////////////
   "Pattern match": {
     "description": "Pattern match",
-    "prefix": "ptm",
+    "prefix": "pm",
     "body": [
       "match(${1:value})",
       ".${2:case}(${3:predicateFn}, ${4:handler})",
@@ -198,7 +198,7 @@
   },
   "Pattern matching with With": {
     "description": "Pattern matching with With",
-    "prefix": "ptmwt",
+    "prefix": "pm.with",
     "body": [
       "match(${1:value})",
       ".with(${2:pattern},${3:handler})",
@@ -207,7 +207,7 @@
   },
   "Pattern matching with When": {
     "description": "Pattern matching with When",
-    "prefix": "ptmwh",
+    "prefix": "pm.when",
     "body": [
       "match(${1:value})",
       ".when(${2:handler},${3:handler})",
