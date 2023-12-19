@@ -128,6 +128,11 @@
     "prefix": "fid",
     "body": "F.identity"
   },
+  "Function ignore": {
+    "description": "Function ignore",
+    "prefix": "fig",
+    "body": "F.ignore"
+  },
   "Function coerce": {
     "description": "Function coerce",
     "prefix": "fc",
