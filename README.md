@@ -214,6 +214,15 @@ F.identity
 ```
 
 
+### Function ignore
+- Description: Function ignore
+- Prefix: fig
+- Body:
+```
+F.ignore
+```
+
+
 ### Function coerce
 - Description: Function coerce
 - Prefix: fc
