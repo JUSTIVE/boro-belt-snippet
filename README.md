@@ -214,6 +214,15 @@ F.identity
 ```
 
 
+### Function Equals
+- Description: Function equals
+- Prefix: feq
+- Body:
+```
+F.equals(${1:value})
+```
+
+
 ### Function ignore
 - Description: Function ignore
 - Prefix: fig
