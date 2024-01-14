@@ -1,6 +1,6 @@
-import * as ChunkSnippet from './chunkSnippet';
+import * as ChunkSnippet from './chunkSnippet.ts';
 
-import { pipe } from '@mobily/ts-belt';
+import { flow } from '@mobily/ts-belt';
 
 export type t = {
   title: string;
@@ -10,12 +10,15 @@ export type t = {
   license: string;
 };
 
-export const fromChunkSnippet = (chunkSnippet: ChunkSnippet.t) => ({
-  title: 'boro-belt',
-  description: "Market Boro's vscode snippet for ts-belt and ts-pattern.",
-  body: pipe(chunkSnippet, ChunkSnippet.toMarkdown),
-  license: '',
-});
+export const fromChunkSnippet = flow<ChunkSnippet.t[], string, t>(
+  ChunkSnippet.toMarkdown,
+  (body) => ({
+    title: 'boro-belt',
+    description: "Market Boro's vscode snippet for ts-belt and ts-pattern.",
+    body,
+    license: '',
+  })
+);
 
 export const toMarkdown = (readme: t) =>
   `# ${readme.title}\n${readme.description}\n\n${readme.body}\n${readme.license}`;

@@ -1,7 +1,8 @@
-import * as Snippet from './Snippet';
+import * as Snippet from './Snippet.ts';
 
-import { A, D, F, N, O, S, flow, pipe } from '@mobily/ts-belt';
-import { P, match } from 'ts-pattern';
+import { A, D, N, O, S, flow, pipe } from '@mobily/ts-belt';
+
+import { match } from 'ts-pattern';
 
 export type t = Record<string, Snippet.t[]>;
 
@@ -10,6 +11,7 @@ type entryValue = {
   description: string;
   prefix: string;
 };
+
 type jsonEntry = readonly [string, entryValue];
 
 export const fromJson = (jsonString: string): t => {

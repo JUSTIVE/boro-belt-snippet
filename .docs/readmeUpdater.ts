@@ -1,18 +1,15 @@
-import * as ChunkSnippet from './chunkSnippet';
-import * as Readme from './readmeFormat';
+import * as ChunkSnippet from './chunkSnippet.ts';
+import * as Readme from './readmeFormat.ts';
 import * as fs from 'fs';
 
-import { F, S, pipe } from '@mobily/ts-belt';
+import { F, S, flow, pipe } from '@mobily/ts-belt';
 
-import { BunFile } from 'bun';
 import path from 'path';
 
-const removeComments = (str: string): string =>
-  pipe(
-    str,
-    S.replaceByRe(/\/\/.*/g, ''),
-    S.replaceByRe(/\/\*[\s\S]*?\*\//g, '')
-  );
+const removeComments = flow(
+  S.replaceByRe(/\/\/.*/g, ''),
+  S.replaceByRe(/\/\*[\s\S]*?\*\//g, '')
+);
 
 const snippetFilePath = path.join(
   process.cwd(),
@@ -29,5 +26,5 @@ pipe(
   ChunkSnippet.fromJson,
   Readme.fromChunkSnippet,
   Readme.toMarkdown,
-  F.tap((data) => fs.writeFileSync(readmePath, data))
+  F.tap((data: string) => fs.writeFileSync(readmePath, data))
 );

@@ -1,9 +1,9 @@
 export type t = {
-  title: string
-  body: string
-  description: string
-  prefix: string
-}
+  title: string;
+  body: string;
+  description: string;
+  prefix: string;
+};
 
 export const make = (
   title: string,
@@ -15,11 +15,11 @@ export const make = (
     title,
     body,
     description,
-    prefix
-  }
-}
+    prefix,
+  };
+};
 
-export const toMarkdown = (snippet: t) =>
+export const toMarkdown = (snippet: t): string =>
   `### ${snippet.title}
 - Description: ${snippet.description}
 - Prefix: ${snippet.prefix}
@@ -27,4 +27,4 @@ export const toMarkdown = (snippet: t) =>
 \`\`\`
 ${Array.isArray(snippet.body) ? snippet.body.join('\n') : snippet.body}
 \`\`\`
-`
+`;
