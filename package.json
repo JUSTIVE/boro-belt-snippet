@@ -9,12 +9,16 @@
     "type": "git",
     "url": "https://github.com/JUSTIVE/boro-belt"
   },
+  "type": "module",
   "engines": {
     "vscode": "^1.78.0"
   },
   "categories": [
     "Snippets"
   ],
+  "scripts": {
+    "docs-gen": "bun run ./.docs/readmeUpdater.ts"
+  },
   "contributes": {
     "snippets": [
       {
@@ -26,5 +30,11 @@
         "path": "./snippets/typescriptreactsnippets.code-snippets"
       }
     ]
+  },
+  "devDependencies": {
+    "@mobily/ts-belt": "^4.0.0-rc.5",
+    "ts-pattern": "^5.0.6",
+    "typescript": "^5.3.3",
+    "@types/bun": "latest"
   }
 }
